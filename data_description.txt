@@ -1,0 +1,81 @@
+Vysvetlenie stĺpcov
+
+Liečba Hypotyreozi (znížená prdukcia hormónu štítnej žlazy) 
+
+on thyroxine [t, f, F, FALSE, T, TRUE] • (Hypothyroidism means low thyroid hormone and you are taking Thyroxine (Levothyroxine) which is a thyroid hormone) 
+
+query on thyroxine [f, t] - Pacient sa pravdepodobne vypytoval na liek na hypotyreozu, takze asi ma nejaké problémy s nou spojené
+
+sick [f, t] - je chory
+
+pregnant [f, t] - tehotná
+
+Liečba Hypertyreozi (zvýšená produkcia hormónu štítnej žlazy) aj Goiter môže byť takto liečený
+
+thyroid surgery [f, t] - chirurgický zákrok
+
+I131 treatment [f, t] - radioaktívna liečba
+
+on antithyroid medication [f, t] - medications—are a common treatment for hyperthyroidism, 
+
+query hypothyroid [f, t] - vypytoval sa na zníženú funkciu hormónu štítnej žlazy
+
+query hyperthyroid [f, t] - vypytoval sa na zvýšenú funkciu hormónu štítnej žlazy
+
+lithium [f, t] - liek používajúci sa na mentálne problémy alebo depresiu (depresia je
+
+jedným s príznakov hypotyroezi)
+
+goitre [f, t] - ochorenie kde hormón štítnej zlazy opuchne
+
+tumor [f, t] - nádor
+
+hypopituitary [f, t] - https://www.webmd.com/a-to-z-guides/hypopituitary#1. Ochorenie spojene s mozgom. Môže spôsobiť zníženú produkciu hormónu štítnej žlazy
+
+psych [f, t]
+
+TSH measured [t, f] - https://www.webmd.com/a-to-z-guides/what-is-tsh-test#1 test na zistenie funkčnosti hormonu štítnej žlazy
+
+TSH [2.9, 0.2, 2.1, 0.02, 0.69, 3.0, 1.1, 26.0, 0.... - vysledky testu (tím ktorím nebol robený budu mať asi Nan)
+
+T3 measured [t, f] - https://www.healthline.com/health/t3 By measuring the T3 in your blood, your doctor may be able to determine if you have a thyroid problem.
+
+T3 [1.2, nan, 1.7, 3.4, 1.1, 2.2, 0.3, 1.9, 1.6, ... - vysledky testu(tím ktorím nebol robený budu mať asi Nan)
+
+TT4 measured [t, f] - About 95% of thyroid hormone is bound to plasma proteins - thyroid binding globulin (TBG), constituting 'total thyroid hormone'. The remainder, approximately 5%, is 'free' in the circulation and therefore metabolically active. It's worth noting that T4 is a pro-hormone, which is converted into T3 by 5'-iodinase. T3 has a higher metabolic activity than T4, but has a shorter half-life. Taking this into account, I would say free T4 (FT4) is a good assessment of thyroid hormone levels. It would also be worth testing FT3, given that there can be issues in the conversion of T4 to T3. It may also be worth testing for thyroid stimulating hormone (TSH), which if elevated, along with a depressed FT4 result, is indicative of hypothyroidism. Here's some more 
+
+TT4 [174.0, 105.0, 96.0, 91.0, 162.0, 122.0, 115.0...
+
+T4U measured [f, t]
+
+T4U [nan, 0.97, 1.1, 0.99, 1.13, 0.95, 0.8, 0.66, ...
+
+FTI measured [f, t] dtype: object FTI [?, 108, 83, 163, 121, 7.6, 174, 165, 77, 107,... dtype: object TBG measured [f] dtype: object
+
+TBG [?] dtype: object
+
+referral source [other, SVI, STMW, SVHC, SVHD] dtype: object
+
+class [replacement therapy.|3560, negative.|311, neg... dtype: object
+
+personal_info - stĺpec nám hovori o osobných údajoch jedného pacienta. Tieto údaje bude treba rozdeliť do dalších stĺpcov. Podľa názornej hodnoty predpokladáme vznik nasledovných 4 stlpcov
+
+Sales|United-States Married-civ-spouse -- Self-emp-inc|White Other-service|United-States Never-married -- Private|Black
+
+Práca|Štát Rodinný stav z minulosti-- Pracovný sektor|Rasa
+
+date_of_birth - tento stĺpec hovorí o dátume narodenia. Je potreba zjednotiť formát dátumov
+
+hours-per-week - myslím si, že stĺpec hovorí o pracovných hodinách. Môžeme predpokladať, že ľudia, ktorý pracujú viac hodín ako iný sú náchilnejší na choroby. Druhá možnosť mi napadá, že to môže byť počet hodín koľko sa treba venovať pacientovi.
+
+capital-loss - strata kapitálu napríklad znamená keď investujeme do bitcoinov pri hodnote 9000 eur/ks ale cena bitcoinu začne prudko klesať a na sume 8000eur/ks spanikárime a predáme bitcoiny za nižšiu cenu za akú sme ich nakúpili. Toto vedie k stresu a to môže mať vplyv na ochorenie.
+
+Capital-gain - je opakom capital-loss
+
+Relationship - aktuálny stav
+
+Education-num - https://en.wikipedia.org/wiki/Educational_stage
+
+Education - Some-college, HS-grad, Assoc-voc, Doctora...
+
+Final sampling weight - váha riadkov (môžme zanedbať v 3. fáze)
