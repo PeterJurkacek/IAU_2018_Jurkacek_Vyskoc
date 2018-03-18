@@ -1,5 +1,7 @@
 Toto ulozisko obsahuje projekt k predmetu IAU v akademickom roku 2017/2018.
 
+- **prieskumna_analyza.ipynb** 
+    - súbor obsahujúci vypracované zadanie   
 - **project.ipynb**
     - spustitelny subor cez jupyter notebook do ktoreho sa robi zmena zdrojoveho kodu
 - **data**
