@@ -1,0 +1,37 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label=<ON_THYROXINE &le; 0.5<br/>entropy = 0.248<br/>samples = 2798<br/>value = [2711, 23, 29, 35]<br/>class = REPLACEMENT_THERAPY>, fillcolor="#e58139f7"] ;
+1 [label=<entropy = 0.0<br/>samples = 2469<br/>value = [2469, 0, 0, 0]<br/>class = REPLACEMENT_THERAPY>, fillcolor="#e58139ff"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<FTI &le; 155.5<br/>entropy = 1.247<br/>samples = 329<br/>value = [242, 23, 29, 35]<br/>class = REPLACEMENT_THERAPY>, fillcolor="#e58139b4"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label=<TSH &le; 6.15<br/>entropy = 0.635<br/>samples = 275<br/>value = [237, 0, 3, 35]<br/>class = REPLACEMENT_THERAPY>, fillcolor="#e58139d7"] ;
+2 -> 3 ;
+4 [label=<T4U_MEASURED &le; 0.5<br/>entropy = 0.139<br/>samples = 234<br/>value = [230, 0, 3, 1]<br/>class = REPLACEMENT_THERAPY>, fillcolor="#e58139fb"] ;
+3 -> 4 ;
+5 [label=<entropy = 0.725<br/>samples = 27<br/>value = [23, 0, 3, 1]<br/>class = REPLACEMENT_THERAPY>, fillcolor="#e58139d4"] ;
+4 -> 5 ;
+6 [label=<entropy = 0.0<br/>samples = 207<br/>value = [207, 0, 0, 0]<br/>class = REPLACEMENT_THERAPY>, fillcolor="#e58139ff"] ;
+4 -> 6 ;
+7 [label=<FTI &le; 62.0<br/>entropy = 0.659<br/>samples = 41<br/>value = [7, 0, 0, 34]<br/>class = OVERREPLACEMENT>, fillcolor="#d739e5ca"] ;
+3 -> 7 ;
+8 [label=<entropy = 0.0<br/>samples = 5<br/>value = [5, 0, 0, 0]<br/>class = REPLACEMENT_THERAPY>, fillcolor="#e58139ff"] ;
+7 -> 8 ;
+9 [label=<entropy = 0.31<br/>samples = 36<br/>value = [2, 0, 0, 34]<br/>class = OVERREPLACEMENT>, fillcolor="#d739e5f0"] ;
+7 -> 9 ;
+10 [label=<FTI &le; 170.5<br/>entropy = 1.35<br/>samples = 54<br/>value = [5, 23, 26, 0]<br/>class = UNDERREPLACEMENT>, fillcolor="#399de519"] ;
+2 -> 10 ;
+11 [label=<AGE &le; 41.5<br/>entropy = 0.85<br/>samples = 28<br/>value = [2, 3, 23, 0]<br/>class = UNDERREPLACEMENT>, fillcolor="#399de5cc"] ;
+10 -> 11 ;
+12 [label=<entropy = 1.0<br/>samples = 4<br/>value = [2, 0, 2, 0]<br/>class = REPLACEMENT_THERAPY>, fillcolor="#e5813900"] ;
+11 -> 12 ;
+13 [label=<entropy = 0.544<br/>samples = 24<br/>value = [0, 3, 21, 0]<br/>class = UNDERREPLACEMENT>, fillcolor="#399de5db"] ;
+11 -> 13 ;
+14 [label=<TSH &le; 0.275<br/>entropy = 1.01<br/>samples = 26<br/>value = [3, 20, 3, 0]<br/>class = NEGATIVE>, fillcolor="#47e539bc"] ;
+10 -> 14 ;
+15 [label=<entropy = 0.575<br/>samples = 22<br/>value = [0, 19, 3, 0]<br/>class = NEGATIVE>, fillcolor="#47e539d7"] ;
+14 -> 15 ;
+16 [label=<entropy = 0.811<br/>samples = 4<br/>value = [3, 1, 0, 0]<br/>class = REPLACEMENT_THERAPY>, fillcolor="#e58139aa"] ;
+14 -> 16 ;
+}
